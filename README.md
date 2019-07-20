@@ -2,9 +2,8 @@
 Calculates the total profit for an eBay transaction via amounts inputted by user.
 
 ## Features and functions
-* Input sold price, shipping price, shipping cost, item cost, and PayPal usage.
-* Output total profit.
-* Display breakdown of how profit was calculated.
+* Input sold price, shipping price, shipping cost, and item.
+* Output total profit, return, and margin.
 
 ## Technologies utilized
 * HTML
