@@ -5,8 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>eBay Fee Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="calculator-container">
+        <div class="box top">
+            <div class="row">
+                <h1>EBAY FEE <br> CALCULATOR</h1>
+            </div>
+        </div>
+        <div class="box revenue">
+            <div class="row">
+                <label for="sold-price">Sold price</label>
+                <input type="number" name="sold-price" id="sold-price">
+            </div>
+            <div class="row">
+                <label for="shipping-price">Shipping price</label>
+                <input type="number" name="shipping-price" id="shipping-price">
+            </div>
+            <div class="row">
+                <h1>Revenue</h1>
+                <h1>$270.44</h1>
+            </div>
+        </div>
+        <div class="box costs">
+            <div class="row">
+                <label for="item-cost">Item cost</label>
+                <input type="number" name="item-cost" id="item-cost">
+            </div>
+            <div class="row">
+                <label for="shipping-cost">Shipping cost</label>
+                <input type="number" name="shipping-cost" id="shipping-cost">
+            </div>
+            <div class="row">
+                <label for=""></label>
+                <h1>(270.44 - 224.43)</h1>
+                <h2>(270.44 - 224.43)</h2>
+                <h3>(270.44 - 224.43)</h3>
+            </div>
+            <div class="row">
+                <label for=""></label>
+                
+            </div>
+        </div>
+        <div class="box results"></div>
+    </div>
     <script src="calc.js"></script>
 </body>
 </html>
