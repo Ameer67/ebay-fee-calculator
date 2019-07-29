@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900i&display=swap');
+
 @font-face{
     font-family: 'Bahnschrift';
     src: url('font/BAHNSCHRIFT.woff');
@@ -56,6 +58,7 @@ table {
 
 html {
     font-family: 'Bahnschrift', sans-serif;
+    font-size: 20px;
     background: url(img/bg.jpg);
     height: 100%;
 }
@@ -67,10 +70,9 @@ body {
 }
 
 h1 {
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 1.75em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    line-height: .9;
 }
 
 h2 {
@@ -81,6 +83,6 @@ h3 {
     font-size: 1.125em;
 }
 #calculator-container {
-    background: yellow;
+    background: white;
     align-self: center;
 }
