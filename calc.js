@@ -43,27 +43,30 @@ function calculateAndPrintResults() {
     let marginPercentage = document.getElementById("margin");
         
     // REVENUE
-    let revenueAmount = (parseFloat(soldPrice) + parseFloat(shippingPrice.value)).toFixed(2);
-    revenue.value = revenueAmount;
+    if (soldPrice != 0){
+        let revenueAmount = (soldPrice + shippingPrice).toFixed(2);
+        revenue.value = revenueAmount;
 
-    // FEES
-    ebayFee.value = (0.10 * revenueAmount).toFixed(2);
-    paypalFee.value = (.029 * revenueAmount + 0.30).toFixed(2);
+        // FEES
+        ebayFee.value = (0.10 * revenueAmount).toFixed(2);
+        paypalFee.value = (.029 * revenueAmount + 0.30).toFixed(2);
 
-    // COSTS
-    let costsAmount = (parseFloat(itemCost.value) + parseFloat(shippingCost.value) + parseFloat(ebayFee.value) + parseFloat(paypalFee.value)).toFixed(2);
-    costs.value = costsAmount;
+        // COSTS
+        let costsAmount = (itemCost + shippingCost + parseFloat(ebayFee.value) + parseFloat(paypalFee.value)).toFixed(2);
+        costs.value = costsAmount;
 
-    // PROFIT
-    let profitAmount = (revenueAmount - costsAmount).toFixed(2);
-    totalProfit.value = profitAmount;
+        // PROFIT
+        let profitAmount = (revenueAmount - costsAmount).toFixed(2);
+        totalProfit.value = profitAmount;
 
-    // RETURN %
-    let returnAmount = ((profitAmount / costsAmount) * 100).toFixed(1);
-    returnPercentage.value = returnAmount;
+        // RETURN %
+        let returnAmount = ((profitAmount / costsAmount) * 100).toFixed(1);
+        returnPercentage.value = returnAmount;
 
-    // MARGIN %
-    let marginAmount = ((profitAmount / revenueAmount) * 100).toFixed(1);
-    marginPercentage.value = marginAmount;
+        // MARGIN %
+        let marginAmount = ((profitAmount / revenueAmount) * 100).toFixed(1);
+        marginPercentage.value = marginAmount;
+    }
+    
 
 }
