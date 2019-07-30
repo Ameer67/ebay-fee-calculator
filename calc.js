@@ -1,12 +1,49 @@
-// DEFINTIONS:
-// return = % of cost that became the
-//          amout of profit
-// margin = what % of total revenue is profit
+// MAIN CONTAINER
+let calculatorContainer = document.getElementById("calculator-container");
+
+// USER INTERFACE 
+calculatorContainer.addEventListener("input", calculateAndPrintResults);
 
 // CALCULATE AND OUTPUT RESULTS
-function printResults() {
+function calculateAndPrintResults() {
+
+    // INPUT VARIABLES
+    // Initialize variable to 0.
+    // Check if input is NaN (in this case, the isNaN method would return true since the input is ""). If not, assign that input's value to corresponding variable.
+
+    let soldPrice = 0;
+    if (!isNaN(parseFloat(document.getElementById("sold-price").value))){
+        soldPrice = parseFloat(document.getElementById("sold-price").value);
+    }
+
+    let shippingPrice = 0;
+    if (!isNaN(parseFloat(document.getElementById("shipping-price").value))) {
+        shippingPrice = parseFloat(document.getElementById("shipping-price").value);
+    }
+
+    let itemCost = 0;
+    document.getElementById("item-cost").value;
+    if (!isNaN(parseFloat(document.getElementById("item-cost").value))) {
+        itemCost = parseFloat(document.getElementById("item-cost").value);
+    }
+
+    let shippingCost = 0;
+    document.getElementById("shipping-cost").value;
+    if (!isNaN(parseFloat(document.getElementById("shipping-cost").value))) {
+        shippingCost = parseFloat(document.getElementById("shipping-cost").value);
+    }
+
+    // HTML OUTPUT VARIABLES
+    let revenue = document.getElementById("revenue");
+    let ebayFee = document.getElementById("ebay-fee");
+    let paypalFee = document.getElementById("paypal-fee");
+    let costs = document.getElementById("costs");
+    let totalProfit = document.getElementById("total-profit");
+    let returnPercentage = document.getElementById("return");
+    let marginPercentage = document.getElementById("margin");
+        
     // REVENUE
-    let revenueAmount = (parseFloat(soldPrice.value) + parseFloat(shippingPrice.value)).toFixed(2);
+    let revenueAmount = (parseFloat(soldPrice) + parseFloat(shippingPrice.value)).toFixed(2);
     revenue.value = revenueAmount;
 
     // FEES
@@ -28,25 +65,5 @@ function printResults() {
     // MARGIN %
     let marginAmount = ((profitAmount / revenueAmount) * 100).toFixed(1);
     marginPercentage.value = marginAmount;
+
 }
-
-// MAIN CONTAINER
-let calculatorContainer = document.getElementById("calculator-container");
-
-// HTML INPUT VARIABLES
-let soldPrice = document.getElementById("sold-price");
-let shippingPrice = document.getElementById("shipping-price");
-let itemCost = document.getElementById("item-cost");
-let shippingCost = document.getElementById("shipping-cost");
-
-// HTML OUTPUT VARIABLES
-let revenue = document.getElementById("revenue");
-let ebayFee = document.getElementById("ebay-fee");
-let paypalFee = document.getElementById("paypal-fee");
-let costs = document.getElementById("costs");
-let totalProfit = document.getElementById("total-profit");
-let returnPercentage = document.getElementById("return");
-let marginPercentage = document.getElementById("margin");
-
-// USER INTERFACE 
-calculatorContainer.addEventListener("input", printResults);
