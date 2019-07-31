@@ -39,6 +39,7 @@ function calculateAndPrintResults() {
     let paypalFee = document.getElementById("paypal-fee");
     let costs = document.getElementById("costs");
     let totalProfit = document.getElementById("total-profit");
+    let profitMath = document.getElementById("profit-math");
     let returnPercentage = document.getElementById("return");
     let marginPercentage = document.getElementById("margin");
         
@@ -48,6 +49,7 @@ function calculateAndPrintResults() {
         paypalFee.value = "";
         costs.value = "";
         totalProfit.value = "";
+        profitMath.textContent = "";
         returnPercentage.value = "";
         marginPercentage.value = "";
     } else { 
@@ -63,10 +65,13 @@ function calculateAndPrintResults() {
         let costsAmount = (itemCost + shippingCost + parseFloat(ebayFee.value) + parseFloat(paypalFee.value)).toFixed(2);
         costs.value = "$" + costsAmount;
 
-        // PROFIT
+        // TOTAL PROFIT
         let profitAmount = (revenueAmount - costsAmount).toFixed(2);
         totalProfit.value = "$" + profitAmount;
 
+        // DISPLAY THE MATH FOR THE PROFIT
+        profitMath.textContent = "(" + revenueAmount + " - " + costsAmount + ")";
+        
         // RETURN %
         let returnAmount = ((profitAmount / costsAmount) * 100).toFixed(1);
         returnPercentage.value = returnAmount + "%";
