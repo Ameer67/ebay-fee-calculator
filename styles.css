@@ -174,7 +174,6 @@ input[disabled]{
 }
 
 #total-profit {
-    color: #1a7c1a;
     font-size: 2em;
     font-weight: bold;
 }
@@ -189,6 +188,7 @@ input[disabled]{
     }
 
     body {
+        height: 100%;
         justify-content: center;
     }
 

@@ -69,6 +69,14 @@ function calculateAndPrintResults() {
         let profitAmount = (revenueAmount - costsAmount).toFixed(2);
         totalProfit.value = "$" + profitAmount;
 
+        // Change color of text depending if profit if positive or negative
+        if (profitAmount < 0){
+            totalProfit.value = "-$" + (-1 * profitAmount);
+            totalProfit.style.color = "red";
+        } else {
+            totalProfit.style.color = "#1a7c1a";
+        }
+
         // DISPLAY THE MATH FOR THE PROFIT
         profitMath.textContent = "(" + revenueAmount + " - " + costsAmount + ")";
         
