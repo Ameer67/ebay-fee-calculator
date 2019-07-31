@@ -68,4 +68,5 @@ function calculateAndPrintResults() {
         marginPercentage.value = marginAmount;
     }
     
+
 }
