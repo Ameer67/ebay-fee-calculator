@@ -98,8 +98,9 @@ h3 {
 }
 
 .row {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid blue;
 }
@@ -109,10 +110,20 @@ label {
 }
 
 input {
+    width: 100px;
     font-family: 'Bahnschrift', sans-serif;
     font-size: 1em;
     border: 0;
     text-align: right;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .top {
