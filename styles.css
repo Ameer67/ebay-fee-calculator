@@ -91,6 +91,7 @@ h3 {
     align-self: center;
     width: 100%;
     height: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,.25);
 }
 
 .row {
@@ -134,7 +135,7 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-input[disabled]{
+input[disabled] {
     background: transparent;
     color: initial;
 }
@@ -146,7 +147,7 @@ input[disabled]{
 /* Top row with title */
 .top {
     padding: 1.25em .5em 1.25em .5em;
-    background: rgba(0,0,0,.50);
+    background: no-repeat 110%/7em url("img/money-bag.png"), rgba(0,0,0,.50);
     border: 2px solid darkslategray;
 }
 
