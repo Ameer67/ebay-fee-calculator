@@ -76,6 +76,7 @@ h1 {
     font-weight: bold;
     font-size: 1.5em;
     line-height: .9;
+    color: white;
 }
 
 h2 {
@@ -87,10 +88,14 @@ h3 {
 }
 
 #calculator-container {
-    background: rgba(255, 255, 255, .75);
+    background: rgba(255, 255, 255, .50);
     align-self: center;
     width: 100%;
     height: 100%;
+}
+
+.box .row:last-child {
+    border: 0;
 }
 
 .row {
@@ -112,7 +117,7 @@ input {
     font-size: 1em;
     border: 0;
     text-align: right;
-    padding-right: .5em;
+    padding-right: .5rem;
 }
 
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
@@ -126,21 +131,21 @@ input[type="number"] {
 
 input[disabled]{
     background: transparent;
-}
-
-.top {
-    padding: .5em;
-    background: rgba(0,0,0,0.40);
-}
-
-.top .row {
-    border: 0;
+    color: initial;
 }
 
 .total label, .total input {
     color: white;
 }
 
+/* Top row with title */
+.top {
+    padding: .5em;
+    background: rgba(0,0,0,.50);
+    border: 2px solid darkslategray;
+}
+
+/* Revenue */
 .revenue {
     border: 2px solid #00408e;
 }
@@ -149,6 +154,7 @@ input[disabled]{
     background: #00408e;
 }
 
+/* Costs */
 .costs {
     border: 2px solid #ad0000;
 }
@@ -157,12 +163,22 @@ input[disabled]{
     background: #ad0000; 
 }
 
+/* Results */
 .results {
     border: 2px solid #1a7c1a;
 }
 
-/* STYLES FOR BIGGER SCREENS */
-@media(min-width: 700px){
+#total-profit {
+    color: #1a7c1a;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/**********************************************/
+/********* STYLES FOR BIGGER SCREENS **********/
+/**********************************************/
+
+@media(min-width: 420px){
     html {
         font-size: 22px;
     }
@@ -172,7 +188,7 @@ input[disabled]{
     }
 
     #calculator-container {
-        width: 50%;
+        width: 420px;
         height: auto;
     }
 }
