@@ -94,16 +94,16 @@ h3 {
     height: 100%;
 }
 
-.box .row:last-child {
-    border: 0;
-}
-
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid gray;
+}
+
+.no-border {
+    border: 0;
 }
 
 label {
