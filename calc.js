@@ -42,11 +42,18 @@ function calculateAndPrintResults() {
     let returnPercentage = document.getElementById("return");
     let marginPercentage = document.getElementById("margin");
         
-    // REVENUE
-    if (soldPrice > 0){ // Only process calculations and results as long as sold price is greater than 0.
+    if (soldPrice <= 0 || shippingPrice < 0 | itemCost < 0 || shippingCost < 0) { // Only process calculations and output results as long as input values are valid.
+        revenue.value = "";
+        ebayFee.value = "";
+        paypalFee.value = "";
+        costs.value = "";
+        totalProfit.value = "";
+        returnPercentage.value = "";
+        marginPercentage.value = "";
+    } else { 
+        // REVENUE
         let revenueAmount = (soldPrice + shippingPrice).toFixed(2);
         revenue.value = revenueAmount;
-
         // FEES
         ebayFee.value = (0.10 * revenueAmount).toFixed(2);
         paypalFee.value = (.029 * revenueAmount + 0.30).toFixed(2);
