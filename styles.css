@@ -36,7 +36,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    overflow-x: hidden;
+    height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -63,12 +65,9 @@ html {
     font-family: 'Bahnschrift', sans-serif;
     font-size: 18px;
     background: url(img/bg.jpg);
-    height: 100%;
+    min-height: 100%;
 }
 
-body {
-    display: flex;
-}
 
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -107,6 +106,7 @@ h3 {
 }
 
 span {
+    height: .75em;
     display: block;
     font-size: .75rem;
 }
@@ -188,7 +188,8 @@ input[disabled]{
     }
 
     body {
-        height: 100%;
+        display: flex;
+        min-height: 100vh;
         justify-content: center;
     }
 
