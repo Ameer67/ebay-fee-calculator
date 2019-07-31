@@ -43,7 +43,7 @@ function calculateAndPrintResults() {
     let marginPercentage = document.getElementById("margin");
         
     // REVENUE
-    if (soldPrice != 0){
+    if (soldPrice > 0){ // Only process calculations and results as long as sold price is greater than 0.
         let revenueAmount = (soldPrice + shippingPrice).toFixed(2);
         revenue.value = revenueAmount;
 
