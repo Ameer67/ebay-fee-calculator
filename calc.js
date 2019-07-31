@@ -64,15 +64,15 @@ function calculateAndPrintResults() {
 
         // PROFIT
         let profitAmount = (revenueAmount - costsAmount).toFixed(2);
-        totalProfit.value = profitAmount;
+        totalProfit.value = "$" + profitAmount;
 
         // RETURN %
         let returnAmount = ((profitAmount / costsAmount) * 100).toFixed(1);
-        returnPercentage.value = returnAmount;
+        returnPercentage.value = returnAmount + "%";
 
         // MARGIN %
         let marginAmount = ((profitAmount / revenueAmount) * 100).toFixed(1);
-        marginPercentage.value = marginAmount;
+        marginPercentage.value = marginAmount + "%";
     }
     
 
