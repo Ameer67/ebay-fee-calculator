@@ -53,14 +53,15 @@ function calculateAndPrintResults() {
     } else { 
         // REVENUE
         let revenueAmount = (soldPrice + shippingPrice).toFixed(2);
-        revenue.value = revenueAmount;
+        revenue.value = "$" + revenueAmount;
+        
         // FEES
         ebayFee.value = (0.10 * revenueAmount).toFixed(2);
         paypalFee.value = (.029 * revenueAmount + 0.30).toFixed(2);
 
         // COSTS
         let costsAmount = (itemCost + shippingCost + parseFloat(ebayFee.value) + parseFloat(paypalFee.value)).toFixed(2);
-        costs.value = costsAmount;
+        costs.value = "$" + costsAmount;
 
         // PROFIT
         let profitAmount = (revenueAmount - costsAmount).toFixed(2);
