@@ -93,28 +93,26 @@ h3 {
     height: 100%;
 }
 
-.box {
-    border: 1px solid black;
-}
-
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid gray;
 }
 
 label {
     padding: .5em;
+    color: darkslategray;
 }
 
 input {
-    width: 100px;
+    width: 6em;
     font-family: 'Bahnschrift', sans-serif;
     font-size: 1em;
     border: 0;
     text-align: right;
+    padding-right: .5em;
 }
 
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
@@ -126,12 +124,41 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+input[disabled]{
+    background: transparent;
+}
+
 .top {
     padding: .5em;
+    background: rgba(0,0,0,0.40);
 }
 
 .top .row {
     border: 0;
+}
+
+.total label, .total input {
+    color: white;
+}
+
+.revenue {
+    border: 2px solid #00408e;
+}
+
+.revenue-amount {
+    background: #00408e;
+}
+
+.costs {
+    border: 2px solid #ad0000;
+}
+
+.costs-amount {
+    background: #ad0000; 
+}
+
+.results {
+    border: 2px solid #1a7c1a;
 }
 
 /* STYLES FOR BIGGER SCREENS */
