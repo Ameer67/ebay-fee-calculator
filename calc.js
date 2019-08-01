@@ -71,7 +71,7 @@ function calculateAndPrintResults() {
 
         // Change color of text depending if profit if positive or negative
         if (profitAmount < 0){
-            totalProfit.value = "-$" + (-1 * profitAmount);
+            totalProfit.value = "-$" + (-1 * profitAmount).toFixed(2);
             totalProfit.style.color = "red";
         } else {
             totalProfit.style.color = "#1a7c1a";
