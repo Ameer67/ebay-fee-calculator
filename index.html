@@ -40,11 +40,11 @@
             </div>
             <div class="row">
                 <label for="">eBay fee<span>(10% of revenue)</span></label>
-                <input type="number" disabled="true" id="ebay-fee">
+                <input type="number" disabled="true" id="ebay-fee" step=".01">
             </div>
             <div class="row no-border">
                 <label for="">PayPal fee<span>(2.9% of revenue + $0.30)</span></label>
-                <input type="number" disabled="true" id="paypal-fee">
+                <input type="number" disabled="true" id="paypal-fee" step=".01">
             </div>
             <div class="row costs-amount total no-border">
                 <label>Costs</label>
@@ -54,15 +54,15 @@
         <div class="box results">
             <div class="row">
                 <label>Total profit<span id="profit-math"></span></label>
-                <input disabled="true" id ="total-profit">
+                <input disabled="true" id ="total-profit" step=".01">
             </div>
             <div class="row">
                 <label>Return</label>
-                <input disabled="true" id="return">
+                <input disabled="true" id="return" step=".01">
             </div>
             <div class="row no-border">
                 <label>Margin</label>
-                <input disabled="true" id="margin">
+                <input disabled="true" id="margin" step=".01">
             </div>
         </div>
     </form>
