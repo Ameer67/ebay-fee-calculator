@@ -58,7 +58,7 @@ function calculateAndPrintResults() {
         revenue.value = "$" + revenueAmount;
         
         // FEES
-        ebayFee.value = (0.10 * revenueAmount).toFixed(2);
+        ebayFee.value = (.10 * revenueAmount).toFixed(2);
         paypalFee.value = (.029 * revenueAmount + 0.30).toFixed(2);
 
         // COSTS
