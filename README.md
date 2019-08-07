@@ -11,4 +11,4 @@ Calculates the total profit for an eBay transaction via amounts inputted by user
 * JavaScript
 
 ## Status
-Work in progress
+Done
